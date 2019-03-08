@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Post</title>
+</head>
+<body>
+<center>
+    <tr>
+        <td><img width="500" th:src="@{/post/getImage(picUrl=${post.picUrl})}"></td><br><br>
+        <td th:text="${post.title}"></td><br><br>
+        <td th:text="${post.description}"></td>
+    </tr>
+</center>
+<a href="/">Home</a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Post By Category</title>
+</head>
+<body>
+<center>
+    <div  style="border: 1px black solid;"  th:each="post : ${posts}">
+        <a th:href="@{/post/openPost(id=${post.id})}" ><img width="200" th:src="@{/post/getImage(picUrl=${post.picUrl})}"></a><br>
+        <a th:href="@{/post/openPost(id=${post.id})}"  th:text="${post.title}"></a>
+
+    </div>
+</center>
+<a href="/">Home</a>
+</body>
+</html>
